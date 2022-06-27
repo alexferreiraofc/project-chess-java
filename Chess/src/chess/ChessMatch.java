@@ -102,7 +102,7 @@ public class ChessMatch {
             nextTurn();
         }
 
-        // #Specialmove En Passant
+        // # Specialmove En Passant
         if (movedPiece instanceof Pawn && (target.getRow() == source.getRow() - 2 || target.getRow() == source.getRow() + 2)) {
             enPassantVulnerable = movedPiece;
         } else {
@@ -114,7 +114,7 @@ public class ChessMatch {
 
     public ChessPiece replacePromotedPiece(String type) {
         if (promoted == null) {
-            throw new IllegalStateException("There is no piece to be promoted");
+            throw new IllegalStateException("There is no piece to be promoted!");
         }
         if (!type.equals("B") && !type.equals("N") && !type.equals("R") & !type.equals("Q")) {
             return promoted;
